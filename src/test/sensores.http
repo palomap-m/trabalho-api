@@ -1,0 +1,39 @@
+@url = http://localhost:8080/sensores
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJGQVRFQyBBUEkiLCJzdWIiOiJhZG1pbiIsImV4cCI6MTc3NTI0NTk3M30.tgpDj3D3iixT-CiDl8loj3l_ioB0VvoA0v_kwNrwSJk
+
+GET {{url}}
+Authorization: Bearer {{token}}
+
+###
+POST {{url}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "unidade": "°C",
+    "valor": 28.5,
+    "local": "Laboratório 01"
+}
+
+###
+GET {{url}}/2
+Authorization: Bearer {{token}}
+
+###
+GET {{url}}/local/Laboratório 01
+Authorization: Bearer {{token}}
+
+###
+PUT {{url}}/2
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "unidade": "°C",
+    "valor": 22.0,
+    "local": "Laboratório 02"
+}
+
+###
+DELETE {{url}}/2
+Authorization: Bearer {{token}}
