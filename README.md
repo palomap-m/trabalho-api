@@ -13,7 +13,7 @@ docker exec -it mysql mysql -u root -prootpass
 USE application;
 
 INSERT INTO usuarios (nome_de_usuario, senha) 
-VALUES ('admin', '$2a$12$r8D4r74TtNTo6usyFDbQlOQttCVrO2Al2RCzdMCgSwFv4X9HQ5axm'); -- Hash gerado no Bcrypt
+VALUES ('admin', '<hash_gerado>'); -- hash gerado com Bcrypt
 
 SELECT * FROM usuarios;
 
